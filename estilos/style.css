@@ -41,6 +41,7 @@ section#telefone {
 
 }
 
+/* container de dentro de telefone */
 iframe#tela {
     position: relative;
     /* posicionamento da imagem para dentro da tela */ 
@@ -50,4 +51,29 @@ iframe#tela {
     /* dimensões para a imagem encaixar no telefone */ 
     width: 269px;
     height: 471px;
+}
+
+section#redes-socias {
+    text-align: right;
+}
+
+section#redes-socias img {
+    /* dentro da section no id redes-socias dentro de imagens: altura e larguara 50px, margin 10px e arrendondamento border-radius 50%*/
+    width: 50px;
+    margin: 10px;
+    border-radius: 50%;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.384);
+    /* com essa configuração a bordar passa a fazer parte do objeto */
+    box-sizing: border-box;
+}
+
+/* ao mexer na imagem ele terá uma leve movimentação */
+section#redes-socias img:hover {
+    border: 2px solid rgba(255, 255, 255, 0.623);
+    transform: translate(-2px, -2px);
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.603);
+
+    /* transition:translate; serve para quando clicar nas imagens o tempo para ela realizar o transform: a transladar */ 
+    transition: transform .4s, border 1s;
+    
 }

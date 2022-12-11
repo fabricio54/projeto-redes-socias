@@ -1,1 +1,53 @@
 @charset "UTF-8";
+
+* {
+    margin: 0px;
+    padding: 0px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+html, body {
+    height: 100vh;
+    width: 100vw;
+    background-color: black;
+}
+
+body {
+    /* url da imagem de fundo em uma shothand, não repetição topo e centralizada, pegar a imagem inteira e fixada */
+    background: url('../imagens/fundo-madeira.jpg') no-repeat top center;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+/* container de fora */ 
+main {
+    /* indica posicionamento relativo */
+    position: relative;
+    height: 100vh;
+}
+
+/* container de dentro */ 
+section#telefone {
+    /* indica posicionamento absoluto: ganha propriedades específicas como top, left, bottom e right e também usamos a propriedade transform: translate() e configurar para ficar no meio*/
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    /* ver as dimensões da imagem e colocar nas configurações */
+    height: 627px;
+    width: 311px;
+    background: url('../imagens/frame-iphone.png') no-repeat;
+
+}
+
+iframe#tela {
+    position: relative;
+    /* posicionamento da imagem para dentro da tela */ 
+    top: 80px;
+    left: 22px;
+
+    /* dimensões para a imagem encaixar no telefone */ 
+    width: 269px;
+    height: 471px;
+}
